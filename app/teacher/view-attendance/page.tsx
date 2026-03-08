@@ -44,7 +44,7 @@ export default function ViewAttendance() {
       if (filterStudentId) params.set("student_id", filterStudentId);
       if (filterRole) params.set("role", filterRole); 
   
-      const res = await fetch(`http://127.0.0.1:5000/api/attendance?${params.toString()}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/attendance?${params.toString()}`);
       const data = await res.json();
   
       if (data && data.success) {
@@ -91,7 +91,7 @@ export default function ViewAttendance() {
       const params = new URLSearchParams();
       if (selectedDate) params.set("date", selectedDate);
 
-      const res = await fetch(`http://127.0.0.1:5000/api/attendance/export?${params.toString()}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/attendance/export?${params.toString()}`);
       const raw = await res.text();
       let data: any;
       try {
