@@ -104,7 +104,7 @@ export default function StudentRegistrationForm() {
     setStatus("Registering member...");
     try {
       const headerEmail = (typeof window !== 'undefined' && localStorage.getItem('userEmail')) || formData.email;
-      const res = await fetch("http://127.0.0.1:5000/api/register-student", {
+      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/register-student", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
