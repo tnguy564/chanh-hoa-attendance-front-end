@@ -51,7 +51,7 @@ export default function TeacherDashboard() {
 
   const handleLogout = async () => {
     try {
-      await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/logout", {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
