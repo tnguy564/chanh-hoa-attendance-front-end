@@ -71,7 +71,7 @@ export default function DemoSessionPage() {
     if (sessionId) payload.session_id = sessionId;
 
     try {
-      const res = await fetch("http://localhost:5000/api/attendance/real-mark", {
+      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/attendance/real-mark", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -203,7 +203,7 @@ export default function DemoSessionPage() {
     if (sessionId) {
       try {
         setStatus("Closing session...");
-        const res = await fetch("http://localhost:5000/api/attendance/end_session", {
+        const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/attendance/end_session", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ session_id: sessionId }),
@@ -232,7 +232,7 @@ export default function DemoSessionPage() {
 
     setStatus("Creating session...");
     try {
-      const res = await fetch("http://localhost:5000/api/attendance/create_session", {
+      const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/attendance/create_session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -259,7 +259,7 @@ export default function DemoSessionPage() {
       if (sessionId) payload.session_id = sessionId;
 
       try {
-        const res = await fetch("http://localhost:5000/api/attendance/real-mark", {
+        const res = await fetch("${process.env.NEXT_PUBLIC_API_URL}/api/attendance/real-mark", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
