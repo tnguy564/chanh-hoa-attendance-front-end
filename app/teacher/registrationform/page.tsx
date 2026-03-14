@@ -96,7 +96,7 @@ export default function StudentRegistrationForm() {
     e.preventDefault();
     if (validateForm()) {
       setStep(2);
-      setStatus("Please capture your 5 photos for face recognition");
+      setStatus("Capture or upload 5 photos for face recognition");
     }
   };
 
@@ -251,7 +251,7 @@ export default function StudentRegistrationForm() {
                 </div>
                 <h2 className="text-3xl font-bold text-slate-900 mb-2">Face Recognition Setup</h2>
                 <p className="text-slate-600 text-base leading-relaxed">
-                  Follow the on-screen directions and capture 5 clear photos for accurate face recognition
+                  Capture 5 photos with the camera or upload 5 existing photos for face recognition
                 </p>
               </div>
 

@@ -1,6 +1,4 @@
 "use client";
-import mainLogo from "../gdptlogo.jpg";
-
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -8,9 +6,6 @@ import {
   LogIn, 
   Mail, 
   Lock, 
-  User, 
-  GraduationCap, 
-  BookOpen,
   Eye,
   EyeOff,
   UserPlus

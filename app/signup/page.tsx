@@ -7,10 +7,6 @@ import {
   Mail, 
   Lock, 
   User, 
-  GraduationCap, 
-  BookOpen,
-  ArrowLeft,
-  Home,
   LogIn
 } from "lucide-react";
 
